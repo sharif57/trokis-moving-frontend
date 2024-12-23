@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#f2f5f7",
+        primaryText: "#333333",
+        secondaryBg: "#111111",
+      },
+      fontFamily: {
+        lora: ["Lora", "serif"], // Add Lora to the theme
       },
     },
   },
