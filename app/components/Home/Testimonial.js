@@ -59,7 +59,7 @@ const Testimonial = () => {
       </div>
 
       {/* We Are Moving & Transportation Company Services section */}
-      <div className="flex justify-between items-center bg-">
+      <div className="flex justify-between items-center bg-white p-8 rounded-lg">
         <Image
           src={"/images/moving.png"}
           height={600}

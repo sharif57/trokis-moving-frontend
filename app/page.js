@@ -3,6 +3,7 @@ import Banner from "./components/Home/Banner";
 import WhyTrokis from "./components/Home/WhyTrokis";
 import HowWorks from "./components/Home/HowWorks";
 import Testimonial from "./components/Home/Testimonial";
+import Contact from "./components/Home/Contact";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <WhyTrokis></WhyTrokis>
       <HowWorks></HowWorks>
       <Testimonial></Testimonial>
+      <Contact></Contact>
     </div>
   );
 }
