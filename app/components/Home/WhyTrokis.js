@@ -67,6 +67,6 @@ export default function WhyTrokis() {
         ></Image>
       </div>
     </div>
-    // </div>
+    
   );
 }

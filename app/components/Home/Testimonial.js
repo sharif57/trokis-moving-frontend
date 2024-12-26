@@ -65,6 +65,7 @@ const Testimonial = () => {
           height={600}
           width={700}
           alt="moving"
+       
         ></Image>
 
         <div className="w-2/6 mx-auto text-start">
@@ -109,7 +110,7 @@ const Testimonial = () => {
                 />
               </svg>
               <p className="text-lg font-medium text-primaryText ">
-              Professional Working
+                Professional Working
               </p>
             </div>
             <div className="flex items-center gap-4">
@@ -126,7 +127,7 @@ const Testimonial = () => {
                 />
               </svg>
               <p className="text-lg font-medium text-primaryText ">
-              100% Success Moving
+                100% Success Moving
               </p>
             </div>
           </div>
