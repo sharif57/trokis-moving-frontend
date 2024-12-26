@@ -148,14 +148,14 @@ import {
 import Image from "next/image";
 import { Badge } from "antd";
 
-export default function DriverHeader() {
+export default function UserHeader() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   const menuList = [
-    { title: "Moving", path: "/driver/Moving" },
-    { title: "Errand", path: "/driver/Errand" },
+    { title: "Moving", path: "/user/moving" },
+    { title: "Errand", path: "/user/Errand" },
     {
       title: "",
       icon: (
@@ -192,7 +192,7 @@ export default function DriverHeader() {
     <nav className="top-0 z-50">
       <div className="lg:max-w-[1620px] mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/driver" className="flex items-center">
+        <Link href="/user" className="flex items-center">
           <Image
             height={80}
             width={80}

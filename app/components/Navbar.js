@@ -18,7 +18,7 @@ export default function Navbar() {
       title: 'Service',
       icon: <ChevronDown className="inline w-4 h-4 ml-1" />,
       submenu: [
-        { title: 'User', path: '/' },
+        { title: 'User', path: '/user' },
         { title: 'Driver', path: '/driver' },
 
       ],
