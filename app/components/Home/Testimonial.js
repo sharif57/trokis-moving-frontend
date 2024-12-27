@@ -4,7 +4,7 @@ const Testimonial = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-start py-10 bg-[#f2f5f7]">
-        <div className="relative w-full ">
+        <div className="lg:relative w-full ">
           {/* Background Image */}
           <Image
             src={"/images/Testimonial.png"}
@@ -15,9 +15,9 @@ const Testimonial = () => {
           />
 
           {/* Testimonial Card */}
-          <div className="absolute inset-0 flex items-center justify-end ">
+          <div className="lg:absolute inset-0 flex items-center justify-end ">
             <div className="bg-white shadow-lg rounded-lg p-8 max-w-4xl z-10">
-              <h2 className="text-5xl font-normal text-primaryText text-center mb-4">
+              <h2 className="text-5xl  text-center mb-4  sm:text-[45px] font-normal text-primaryText">
                 Testimonial
               </h2>
               <div className="flex flex-col items-center">
@@ -47,7 +47,7 @@ const Testimonial = () => {
                     ))}
                 </div>
                 {/* Testimonial Text */}
-                <p className="text-center w-1/2 mx-auto text-gray-600 mt-2">
+                <p className="text-center lg:w-1/2 mx-auto text-gray-600 mt-2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation
@@ -59,7 +59,7 @@ const Testimonial = () => {
       </div>
 
       {/* We Are Moving & Transportation Company Services section */}
-      <div className="flex justify-between items-center bg-white p-8 rounded-lg">
+      <div className="lg:flex justify-between items-center bg-white p-8 rounded-lg">
         <Image
           src={"/images/moving.png"}
           height={600}
@@ -68,8 +68,8 @@ const Testimonial = () => {
        
         ></Image>
 
-        <div className="w-2/6 mx-auto text-start">
-          <h2 className="text-5xl font-normal text-primaryText  mb-4">
+        <div className="lg:w-2/6 mx-auto text-start">
+          <h2 className="lg:text-5xl text-2xl font-normal text-primaryText  mb-4">
             We Are Moving & Transportation Company Services
           </h2>
           <p className=" text-gray-600">

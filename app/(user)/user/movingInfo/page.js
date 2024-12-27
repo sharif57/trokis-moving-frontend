@@ -125,7 +125,7 @@ export default function movingInfo() {
         {/* Buttons */}
 
         <div className="mt-6">
-          <Link href={"/driver/SubmitQuote"}>
+          <Link href={"/user/priceDone"}>
             <Button
               className="px-12 w-full py-6 text-[18px] font-lora font-normal"
               color="default"

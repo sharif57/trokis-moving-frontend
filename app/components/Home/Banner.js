@@ -182,7 +182,7 @@ export default function Banner() {
       </div>
 
       {/* Right Section */}
-      <div className="flex-1 w-full lg:w-auto">
+      <div className="flex-1 lg:mt-0 mt-5 w-full lg:w-auto">
         <div className="relative w-full h-48 sm:h-64 lg:h-[450px] overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143760.37906979138!2d90.33728812288355!3d23.780975728197344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e1!3m2!1sen!2sbd!4v1734942927850!5m2!1sen!2sbd"

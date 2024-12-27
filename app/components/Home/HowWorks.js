@@ -33,46 +33,58 @@ export default function HowWorks() {
         "Finally, publish your trip and get tagged with a truck. Now enjoy our services and have access to other features and special offers.",
     },
   ];
+
   return (
     <div className="max-w-7xl mx-auto px-4">
+      {/* Header Section */}
       <div className="text-center">
-        <h1 className="text-[45px] font-normal text-primaryText">
+        <h1 className="text-3xl sm:text-[45px] font-normal text-primaryText">
           How it works
         </h1>
-        <p className="text-[23px] font-normal">
+        <p className="text-lg sm:text-[23px] font-normal mt-2">
           A simple and quick truck hiring process.
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
-        <div className="p-8 ">
+      {/* Content Section */}
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:gap-8 mt-10">
+        {/* Steps Section */}
+        <div className="flex flex-col w-full lg:w-1/2">
           {steps.map((step, index) => (
             <div
               key={index}
               className="flex flex-col border rounded-lg p-6 mb-4 shadow-sm bg-white"
             >
-              <h3 className="text-lg font-normal text-primaryText">
+              <h3 className="text-base sm:text-lg font-normal text-primaryText">
                 {step.number}. {step.title}
               </h3>
-              <p className="text-sm text-gray-600 mt-2">{step.description}</p>
+              <p className="text-sm sm:text-base text-gray-600 mt-2">
+                {step.description}
+              </p>
               {step.button && (
-                <Image
-                  src={step.button} // Replace this with the actual image path
-                  height={100}
-                  width={200}
-                  alt="Google Play Badge"
-                  className="mt-4"
-                />
+                <div className="mt-4">
+                  <Image
+                    src={step.button}
+                    height={100}
+                    width={200}
+                    alt="Google Play Badge"
+                  />
+                </div>
               )}
             </div>
           ))}
         </div>
-        <Image
-          height={620}
-          width={740}
-          alt="HowWorks"
-          src={"/images/HowWorks.png"}
-        ></Image>
+
+        {/* Image Section */}
+        <div className="flex justify-center w-full lg:w-1/2 mt-8 lg:mt-0">
+          <Image
+            height={620}
+            width={740}
+            alt="HowWorks"
+            src="/images/HowWorks.png"
+            className="max-w-full h-auto"
+          />
+        </div>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function Navbar() {
         { title: 'User', path: '/user' },
         { title: 'Driver', path: '/driver' },
 
-      ],
+      ],    
     },
     { title: 'Contact Us', path: '/contact' },
     { title: 'About Us', path: '/about' },
@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="w-[1620px] mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+      <div className="lg:w-[1620px] mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image height={100} width={100} className="" src={'/images/Logo.png'} alt="Logo" />
