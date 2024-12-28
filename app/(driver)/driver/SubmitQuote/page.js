@@ -129,20 +129,24 @@ export default function SubmitQuote() {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col items-center gap-4 pb-10 font-lora">
-          <div className="flex gap-4">
-            <Link href={"/driver"}>
+        <div className="lg:flex flex-col items-center gap-4 pb-10 font-lora px-4 sm:px-6 lg:px-8">
+          {/* Button Container */}
+          <div className="flex flex-col lg:flex-row gap-4 items-center">
+            {/* Cancel Button */}
+            <Link href="/driver">
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full lg:w-auto px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-lora font-normal"
                 color="default"
                 variant="outlined"
               >
                 Cancel
               </Button>
             </Link>
-            <Link href={"/driver/StartShipment"}>
+
+            {/* Submit Quote Button */}
+            <Link href="/driver/StartShipment">
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full lg:w-auto px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-lora font-normal"
                 color="default"
                 variant="solid"
               >

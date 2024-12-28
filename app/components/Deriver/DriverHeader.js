@@ -157,13 +157,14 @@ export default function DriverHeader() {
     { title: "Moving", path: "/driver/Moving" },
     { title: "Errand", path: "/driver/Errand" },
     {
-      title: "",
+      // title: "/Notifications",
       icon: (
-        <Badge className="bg-gray-300 p-2 rounded-full" count={5}>
-          <Bell />
-        </Badge>
+          <Badge className="bg-gray-300 p-2 rounded-full" count={5}>
+            <Bell />
+          </Badge>
+       
       ),
-      path: "/driver",
+      path: "/driver/Notifications",
     },
     {
       icon: <ChevronDown className="inline w-4 h-4 ml-1" />,
@@ -180,14 +181,18 @@ export default function DriverHeader() {
       submenu: [
         { title: "Profile", icon: <UserPen />, path: "/driver/Profile" },
         { title: "Activity", icon: <Cable />, path: "/driver/Activity" },
-        { title: "Payment", icon: <BadgeDollarSign />, path: "/driver/Payment" },
+        {
+          title: "Payment",
+          icon: <BadgeDollarSign />,
+          path: "/driver/Payment",
+        },
         { title: "Message", icon: <Mail />, path: "/driver/Message" },
         { title: "Support", icon: <CircleHelp />, path: "/driver/Support" },
         { title: "Logout", icon: <LogOut />, path: "/driver/Logout" },
       ],
     },
-  ];  
-
+  ];
+  
   return (
     <nav className="top-0 z-50">
       <div className="lg:max-w-[1620px] mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center">
@@ -231,7 +236,9 @@ export default function DriverHeader() {
               <li
                 key={index}
                 className={`mb-4 ${
-                  item.path === pathname ? "text-primary font-bold" : "text-black"
+                  item.path === pathname
+                    ? "text-primary font-bold"
+                    : "text-black"
                 }`}
               >
                 <Link

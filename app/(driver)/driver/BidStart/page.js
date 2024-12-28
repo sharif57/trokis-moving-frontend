@@ -12,7 +12,7 @@ import React from "react";
 
 export default function BidStart() {
   return (
-    <div className="flex justify-center gap-10">
+    <div className="lg:flex justify-center gap-10">
       <div>
         <div className="   ">
           <div className="bg-white rounded-lg  p-6  w-full">
@@ -54,11 +54,14 @@ export default function BidStart() {
               <p className="text-gray-700 font-medium">
                 Select Payment Method{" "}
               </p>
-              <div className="flex space-x-4 mt-4">
-                <button className="bg-gray-300 t  text-black px-8 py-2 rounded-lg text-lg flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-4">
+                {/* Online Payment Button */}
+                <button className="bg-gray-300 text-black px-6 sm:px-8 py-3 sm:py-2 rounded-lg text-sm sm:text-lg flex items-center gap-4">
                   Online Payment <BadgeCent />
                 </button>
-                <button className="bg-black text-white px-8 py-2 rounded-lg text-lg flex items-center gap-4">
+
+                {/* Cash Button */}
+                <button className="bg-black text-white px-6 sm:px-8 py-3 sm:py-2 rounded-lg text-sm sm:text-lg flex items-center gap-4">
                   Cash <CircleDollarSign />
                 </button>
               </div>
@@ -81,20 +84,21 @@ export default function BidStart() {
                 </div>
               </div>
 
-              <div className="flex justify-between gap-3 mt-6">
-                <div>
-                  <Link href="/driver/DeliveryDoneErrand" passHref>
-                    <Button
-                      className="px-16 py-6 text-[18px]  font-lora font-normal"
-                      color="default"
-                    >
-                      Cancel
-                    </Button>
-                  </Link>
-                </div>
+              <div className="flex flex-col sm:flex-row justify-between gap-4 mt-6">
+                {/* Cancel Button */}
+                <Link href="/driver/DeliveryDoneErrand" passHref>
+                  <Button
+                    className="w-full sm:w-auto px-6 sm:px-16 py-4 sm:py-6 text-sm sm:text-[18px] font-lora font-normal bg-gray-200 hover:bg-gray-300 transition rounded-lg"
+                    color="default"
+                  >
+                    Cancel
+                  </Button>
+                </Link>
+
+                {/* Start Button */}
                 <Link href="/driver/ParcelErrand" passHref>
                   <Button
-                    className="px-16 py-6 text-[18px] text-white font-lora font-normal"
+                    className="w-full sm:w-auto px-6 sm:px-16 py-4 sm:py-6 text-sm sm:text-[18px] text-white font-lora font-normal bg-black hover:bg-gray-800 transition rounded-lg"
                     color="default"
                     variant="solid"
                   >

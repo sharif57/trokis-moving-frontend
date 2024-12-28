@@ -7,7 +7,7 @@ import React from "react";
 
 export default function LocationErrand() {
   return (
-    <div className="flex justify-center gap-6">
+    <div className="lg:flex justify-center gap-6">
       <div>
         <div className="bg-white p-6 rounded-lg text-primaryText  ">
           <h2 className="text-lg font-normal mb-4">Received location.</h2>
@@ -38,7 +38,7 @@ export default function LocationErrand() {
                 />
                 <div className="space-y-2">
                   <h1 className="text-[18px] font-normal">Sabbir Hossein</h1>
-                  <div className="flex items-center gap-4">
+                  <div className="lg:flex items-center gap-4">
                     <div className="flex items-center gap-2">4.65</div>
                     <p>Phone: 123-456-7890</p>
                     <p>Email: sharifmahamud@gmail.com</p>
@@ -50,30 +50,30 @@ export default function LocationErrand() {
                   <Mail />
                   <p>Send a free message</p>
                 </div>
-                <Phone/>
+                <Phone />
               </div>
-              
             </div>
-          
-            <div className="flex justify-between mt-6">
+
+            <div className="mt-6 flex flex-col sm:flex-row justify-between gap-4 sm:gap-6">
+              {/* Support Button */}
               <Link href="/driver/LocationErrand" passHref>
                 <Button
-                  className="px-16 py-6 text-[18px] font-lora font-normal bg-gray-200"
+                  className="w-full sm:w-auto px-8 sm:px-16 py-4 sm:py-6 text-sm sm:text-[18px] font-lora font-normal bg-gray-200 hover:bg-gray-300 transition rounded-lg"
                   color="default"
                 >
                   Support
                 </Button>
-                
               </Link>
+
+              {/* Received Location Button */}
               <Link href="/driver/DeliveredRequestErrand" passHref>
                 <Button
-                  className="px-16 py-6 text-[18px] font-lora font-normal"
+                  className="w-full sm:w-auto px-8 sm:px-16 py-4 sm:py-6 text-sm sm:text-[18px] font-lora font-normal text-white bg-black hover:bg-gray-800 transition rounded-lg"
                   color="default"
                   variant="solid"
                 >
                   Received Location
                 </Button>
-                
               </Link>
             </div>
           </div>

@@ -57,7 +57,7 @@ export default function driver() {
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-normal text-primaryText">
             Benefits for Driver
           </h1>
-          <p className="text-sm md:text-lg lg:text-xl font-normal text-gray-600 mt-2">
+          <p className="text-sm md:text-lg lg:w-1/2 mx-auto lg:text-xl font-normal text-gray-600 mt-2">
             Truck Lagbe helps you to get trips and earn more by leveraging
             technology, while reducing day-to-day hassle of the traditional
             truck hiring process

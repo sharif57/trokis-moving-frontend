@@ -45,7 +45,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex max-h-fit bg-gray-100">
       {/* Chat List */}
       <div className="w-1/4 bg-white shadow-md overflow-y-auto ">
         {chats.map((chat) => (

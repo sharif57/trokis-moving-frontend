@@ -7,7 +7,7 @@ import React from "react";
 
 export default function StartErrand() {
   return (
-    <div className="flex gap-6">
+    <div className="lg:flex gap-6">
       <div className=" space-y-2 rounded-lg text-[14px] font-normal font-lora">
         <div className="bg-white text-primaryText p-6 rounded-lg">
           <h1>Errand details</h1>
@@ -59,9 +59,9 @@ export default function StartErrand() {
           </div>
           <div className="bg-white p-4 rounded-lg">
             <h2 className="text-[26px] font-normal text-primaryText mb-4">
-            User Information
+              User Information
             </h2>
-            
+
             <div>
               <div className="flex items-center gap-4 mt-8">
                 <Image
@@ -72,10 +72,8 @@ export default function StartErrand() {
                 />
                 <div className="space-y-2">
                   <h1 className="text-[18px] font-normal">Sabbir Hossein</h1>
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      4.65
-                    </div>
+                  <div className="lg:flex items-center gap-4">
+                    <div className="flex items-center gap-2">4.65</div>
                     <p>Phone: 123-456-7890</p>
                     <p>Email: sharifmahamud@gmail.com</p>
                   </div>
@@ -88,31 +86,31 @@ export default function StartErrand() {
                 </div>
                 <Phone />
               </div>
-              <div className="mt-8 flex gap-6">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
+                {/* Cancel Button */}
                 <Link href="/driver/SubmitQuoteErrand" passHref>
                   <Button
-                    className="px-12 py-6 text-[18px] font-lora font-normal"
-                    color=""
+                    className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-sm sm:text-[18px] font-lora font-normal bg-gray-200 hover:bg-gray-300 transition rounded-lg"
+                    color="default"
                     variant="solid"
                   >
                     Cancel
                   </Button>
                 </Link>
+
+                {/* Start Button */}
                 <Link href="/driver/PickedUpErrand" passHref>
                   <Button
-                    className="px-12 py-6 text-[18px] font-lora font-normal"
+                    className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-sm sm:text-[18px] font-lora font-normal text-white bg-black hover:bg-gray-800 transition rounded-lg"
                     color="default"
                     variant="solid"
                   >
                     Start
                   </Button>
-                  {/* <Modals></Modals> */}
                 </Link>
               </div>
             </div>
           </div>
-         
-         
         </div>
       </div>
       <div>

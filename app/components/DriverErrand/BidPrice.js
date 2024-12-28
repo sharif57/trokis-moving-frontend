@@ -7,7 +7,7 @@ import Map from "../shared/Map";
 export default function BidPrice() {
   return (
     <div>
-      <div className="flex gap-6">
+      <div className="lg:flex gap-6">
         <div className="rounded-lg text-[14px] font-normal font-lora">
           <div className="bg-white  p-6 space-y-2 ">
             <h1>Errand details</h1>
@@ -23,7 +23,7 @@ export default function BidPrice() {
               <ArrowDown />
               <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
             </div>
-            <div className="grid grid-cols-2 gap-4 w-1/2 pt-10">
+            <div className="grid grid-cols-2 gap-4 lg:w-1/2 pt-10">
               <Button
                 color="default"
                 variant="solid"

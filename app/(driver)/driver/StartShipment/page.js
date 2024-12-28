@@ -101,23 +101,25 @@ export default function SubmitShipment() {
           </div>
         </div>
 
-       
-
         {/* Buttons */}
-        <div className="flex flex-col items-center gap-4 pb-10 font-lora">
-          <div className="flex gap-4">
-            <Link href={"/driver/SubmitQuote"}>
+        <div className="flex flex-col items-center gap-4 pb-10 font-lora px-4 sm:px-6 lg:px-8">
+          {/* Button Container */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            {/* Cancel Button */}
+            <Link href="/driver/SubmitQuote">
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-lora font-normal"
                 color="default"
                 variant="outlined"
               >
                 Cancel
               </Button>
             </Link>
-            <Link href={"/driver/PickedUp"}>
+
+            {/* Start Shipment Button */}
+            <Link href="/driver/PickedUp">
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-lora font-normal"
                 color="default"
                 variant="solid"
               >

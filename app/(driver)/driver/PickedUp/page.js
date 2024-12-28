@@ -101,25 +101,30 @@ export default function PickedUp() {
           </div>
         </div>
 
-        <div className="bg-white p-4 rounded-lg">
-          <h2 className="text-[18px] font-normal text-primaryText mb-4">
+        <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-lg">
+          {/* Load Details */}
+          <h2 className="text-base sm:text-lg md:text-[18px] font-normal text-primaryText mb-4">
             Load is picked up
           </h2>
-          <p>DHK METRO HA 64-8549</p>
-          <p>48-foot trailer—24 pallets</p>
+          <p className="text-sm sm:text-base">DHK METRO HA 64-8549</p>
+          <p className="text-sm sm:text-base">48-foot trailer—24 pallets</p>
 
+          {/* User Info Section */}
           <div>
-            <div className="flex items-center gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
               <Image
                 src="/images/user.png"
                 width={60}
                 height={60}
                 alt="User Profile"
+                className="rounded-full"
               />
-              <div className="space-y-2">
-                <h1 className="text-[18px] font-normal">Sabbir Hossein</h1>
-                <div className="flex items-center gap-4">
-                  <p className="flex items-center gap-2">
+              <div className="space-y-2 text-center sm:text-left">
+                <h1 className="text-base sm:text-lg md:text-[18px] font-normal">
+                  Sabbir Hossein
+                </h1>
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
+                  <p className="flex items-center gap-2 text-sm sm:text-base">
                     <svg
                       width="14"
                       height="13"
@@ -141,13 +146,17 @@ export default function PickedUp() {
                     </svg>
                     4.65
                   </p>
-                  <p>Phone: 123-456-7890</p>
-                  <p>Email: sharifmahamud@gmail.com</p>
+                  <p className="text-sm sm:text-base">Phone: 123-456-7890</p>
+                  <p className="text-sm sm:text-base">
+                    Email: sharifmahamud@gmail.com
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4 mt-8">
-              <div className="flex items-center gap-4 border-2 text-[20px] font-normal px-5 rounded-3xl p-2">
+
+            {/* Message and Phone Section */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+              <div className="flex items-center gap-4 border-2 text-sm sm:text-base md:text-[20px] font-normal px-5 py-2 rounded-3xl">
                 <Mail />
                 <p>Send a free message</p>
               </div>
@@ -156,21 +165,24 @@ export default function PickedUp() {
           </div>
         </div>
 
-        {/* Buttons */}
-        <div className="flex flex-col items-center gap-4 pb-10 font-lora">
-          <div className="flex gap-4">
-            <Link href={"/driver/SubmitQuote"}>
+        {/* Buttons Section */}
+        <div className="flex flex-col items-center gap-4 pb-10 font-lora px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            {/* Cancel Button */}
+            <Link href="/driver/SubmitQuote">
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-lora font-normal"
                 color="default"
                 variant="outlined"
               >
                 Cancel
               </Button>
             </Link>
-            <Link href={"/driver/OnTheWay"}>
+
+            {/* Start Shipment Button */}
+            <Link href="/driver/OnTheWay">
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-lora font-normal"
                 color="default"
                 variant="solid"
               >

@@ -7,7 +7,7 @@ import React from "react";
 
 export default function ParcelRequest() {
   return (
-    <div className="flex justify-center gap-10">
+    <div className="lg:flex justify-center gap-10">
       <div>
         <div>
           <div>
@@ -77,7 +77,7 @@ export default function ParcelRequest() {
                           <h1 className="text-[18px] font-normal">
                             Sabbir Hossein
                           </h1>
-                          <div className="flex items-center gap-4">
+                          <div className="lg:flex items-center gap-4">
                             <div className="flex items-center gap-2">
                               ⭐4.65
                             </div>

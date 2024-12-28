@@ -7,7 +7,7 @@ import React from "react";
 
 export default function DeliveryDoneErrand() {
   return (
-    <div className="flex justify-center gap-6">
+    <div className="lg:flex justify-center gap-6">
       <div>
         <div className="bg-white p-6 rounded-lg text-primaryText  ">
           <h2 className="text-lg font-normal mb-4">Received location.</h2>
@@ -38,7 +38,7 @@ export default function DeliveryDoneErrand() {
                 />
                 <div className="space-y-2">
                   <h1 className="text-[18px] font-normal">Sabbir Hossein</h1>
-                  <div className="flex items-center gap-4">
+                  <div className="lg:flex items-center gap-4">
                     <div className="flex items-center gap-2">4.65</div>
                     <p>Phone: 123-456-7890</p>
                     <p>Email: sharifmahamud@gmail.com</p>

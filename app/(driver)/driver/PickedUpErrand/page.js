@@ -7,7 +7,7 @@ import React from "react";
 
 export default function PickedUpErrand() {
   return (
-    <div className="flex gap-6">
+    <div className="lg:flex gap-6">
       <div className=" space-y-2 rounded-lg text-[14px] font-normal font-lora">
         <div className="bg-white text-primaryText p-6 rounded-lg">
             <h1 className="font-normal text-[18px] space-y-4 mb-4">Parcel is picked up</h1>
@@ -47,7 +47,7 @@ export default function PickedUpErrand() {
                 />
                 <div className="space-y-2">
                   <h1 className="text-[18px] font-normal">Sabbir Hossein</h1>
-                  <div className="flex items-center gap-4">
+                  <div className="lg:flex items-center gap-4">
                     <div className="flex items-center gap-2">4.65</div>
                     <p>Phone: 123-456-7890</p>
                     <p>Email: sharifmahamud@gmail.com</p>

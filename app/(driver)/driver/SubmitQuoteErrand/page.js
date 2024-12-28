@@ -6,7 +6,7 @@ import React from "react";
 
 export default function SubmitQuoteErrand() {
   return (
-    <div className="flex gap-6">
+    <div className="lg:flex gap-6">
       <div className=" space-y-2 rounded-lg text-[14px] font-normal font-lora">
         <div className="bg-white text-primaryText p-6 rounded-lg">
           <h1>Errand details</h1>
@@ -56,21 +56,23 @@ export default function SubmitQuoteErrand() {
               </div>
             </div>
           </div>
-            {/* Buttons */}
-        <div className="flex flex-col items-center gap-4 pb-10 mt-6 font-lora">
-          <div className="flex gap-4">
-            <Link href={"/driver/Errand"}>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 pb-10 mt-6 font-lora">
+            {/* Cancel Button */}
+            <Link href="/driver/Errand" passHref>
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-sm sm:text-[18px] font-lora font-normal bg-gray-200 hover:bg-gray-300 transition rounded-lg"
                 color="default"
                 variant="outlined"
               >
                 Cancel
               </Button>
             </Link>
-            <Link href={"/driver/StartErrand"}>
+
+            {/* Submit Quote Button */}
+            <Link href="/driver/StartErrand" passHref>
               <Button
-                className="px-12 py-6 text-[18px] font-lora font-normal"
+                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 text-sm sm:text-[18px] font-lora font-normal text-white bg-black hover:bg-gray-800 transition rounded-lg"
                 color="default"
                 variant="solid"
               >
@@ -78,7 +80,6 @@ export default function SubmitQuoteErrand() {
               </Button>
             </Link>
           </div>
-        </div>
         </div>
       </div>
       <div>

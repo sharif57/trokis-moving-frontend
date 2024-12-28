@@ -55,74 +55,87 @@ export default function driver() {
       {/* Benefits for Driver */}
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center">
-          <h1 className="text-[45px] font-normal text-primaryText">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-normal text-primaryText">
             Benefits for Driver
           </h1>
-          <p className="text-[23px] font-normal">
+          <p className="text-sm md:text-lg lg:text-xl font-normal text-gray-600 mt-2 lg:w-1/2 mx-auto">
             Truck Lagbe helps you to get trips and earn more by leveraging
             technology, while reducing day to day hassle of the traditional
             truck hiring process
           </p>
         </div>
-        <div className="flex justify-between items-center mt-10">
-          <div>
-            <div className="flex flex-wrap  gap-4">
+        <div className="lg:flex justify-between items-center gap-8 lg:mt-10 mt-">
+          {/* Left Section - Product Cards */}
+          <div className="flex-1">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
               {prorducts.map((product, index) => (
-                <div key={index} className="w-1/2 md:w-1/3 text-center">
-                  <div className="p-4 bg-white shadow-md rounded-md mb-4 ">
-                    <div className="flex items-center justify-center h-full">
-                      <Image
-                        width={50}
-                        height={50}
-                        className="bg-[#c4f6fc] p-2 lg:p-4 rounded-full text-black shadow-md"
-                        alt={product.title || "Product Image"}
-                        src={product.image}
-                      />
-                    </div>
-
-                    <div className="pt-3">
-                      <h3 className="text-lg font-normal text-primaryText">
-                        {product.title}
-                      </h3>
-                      <p className="text-xs">{product.description}</p>
-                    </div>
+                <div
+                  key={index}
+                  className="bg-white shadow-md rounded-md p-4 text-center"
+                >
+                  <div className="flex items-center justify-center h-20 w-20 mx-auto">
+                    <Image
+                      width={50}
+                      height={50}
+                      className="bg-[#c4f6fc] p-2 rounded-full text-black shadow-md"
+                      alt={product.title || "Product Image"}
+                      src={product.image}
+                    />
+                  </div>
+                  <div className="pt-3">
+                    <h3 className="text-base md:text-lg font-normal text-primaryText">
+                      {product.title}
+                    </h3>
+                    <p className="text-xs md:text-sm text-gray-500">
+                      {product.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <Image
-            width={660}
-            height={555}
-            alt="WhyTrokis"
-            src={"/images/driverPic.png"}
-          ></Image>
+
+          {/* Right Section - Image */}
+          <div className="flex-1 mt-8 lg:mt-0 text-center lg:text-right">
+            <Image
+              width={660}
+              height={555}
+              className="max-w-full h-auto mx-auto lg:mx-0"
+              alt="WhyTrokis"
+              src={"/images/driverPic.png"}
+            />
+          </div>
         </div>
       </div>
 
       {/* How it work section */}
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Text Section */}
         <div className="text-center">
-          <h1 className="text-[45px] font-normal text-primaryText">
+          <h1 className="text-[30px] sm:text-[40px] md:text-[45px] font-normal text-primaryText">
             How it works
           </h1>
-          <p className="text-[23px] font-normal">
+          <p className="text-[18px] sm:text-[20px] md:text-[23px] font-normal">
             A simple and quick truck hiring process.
           </p>
         </div>
 
+        {/* Steps and Image Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 pt-10">
-          <div className="p-8 ">
+          {/* Steps Container */}
+          <div className="flex-1 p-4 sm:p-6 lg:p-8">
             {steps.map((step, index) => (
               <div
                 key={index}
                 className="flex flex-col border rounded-lg p-6 mb-4 shadow-sm bg-white"
               >
-                <h3 className="text-lg font-normal text-primaryText">
+                <h3 className="text-base sm:text-lg font-normal text-primaryText">
                   {step.number}. {step.title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-2">{step.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 mt-2">
+                  {step.description}
+                </p>
                 {step.button && (
                   <Image
                     src={step.button} // Replace this with the actual image path
@@ -135,19 +148,24 @@ export default function driver() {
               </div>
             ))}
           </div>
-          <Image
-            height={500}
-            width={740}
-            alt="HowWorks"
-            src={"/images/driverHow.png"}
-          ></Image>
+
+          {/* Image Section */}
+          <div className="flex-1 flex justify-center items-center">
+            <Image
+              height={500}
+              width={740}
+              alt="HowWorks"
+              src={"/images/driverHow.png"}
+              className="w-full max-w-md sm:max-w-lg lg:max-w-xl"
+            />
+          </div>
         </div>
       </div>
 
       {/* testimonial section */}
       <div>
-        <div className="flex flex-col items-center justify-start py-10 bg-[#f2f5f7]">
-          <div className="relative w-full ">
+        <div className="lg:flex flex-col items-center justify-start py-10 px-4 bg-[#f2f5f7]">
+          <div className="lg:relative w-full ">
             {/* Background Image */}
             <Image
               src={"/images/Testimonial.png"}
@@ -158,9 +176,9 @@ export default function driver() {
             />
 
             {/* Testimonial Card */}
-            <div className="absolute inset-0 flex items-center justify-end ">
+            <div className="lg:absolute inset-0 flex items-center justify-end ">
               <div className="bg-white shadow-lg rounded-lg p-8 max-w-4xl z-10">
-                <h2 className="text-5xl font-normal text-primaryText text-center mb-4">
+                <h2 className="lg:text-5xl text-2xl font-normal text-primaryText text-center mb-4">
                   Testimonial
                 </h2>
                 <div className="flex flex-col items-center">
@@ -190,7 +208,7 @@ export default function driver() {
                       ))}
                   </div>
                   {/* Testimonial Text */}
-                  <p className="text-center w-1/2 mx-auto text-gray-600 mt-2">
+                  <p className="text-center lg:w-1/2 mx-auto text-gray-600 mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -203,16 +221,18 @@ export default function driver() {
       </div>
 
       {/* get the most  */}
-      <div className="flex justify-between items-center mt-20">
-        <div className="w-[500px]    text-start">
-          <h2 className="text-4xl font-normal text-primaryText  mb-4">
+      <div className="lg:flex justify-between items-center mt-20 px-4 sm:px-6 lg:px-8">
+        {/* Text Section */}
+        <div className="lg:w-[500px] text-start mb-8 lg:mb-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-primaryText mb-4">
             Get The Most of Trokis With Our Mobile App
           </h2>
-          <p className=" text-gray-600">
+          <p className="text-sm sm:text-base text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
           <div className="mt-8 space-y-4">
+            {/* Feature 1 */}
             <div className="flex items-center gap-4">
               <svg
                 width="24"
@@ -226,10 +246,11 @@ export default function driver() {
                   fill="#323B47"
                 />
               </svg>
-              <p className="text-lg font-medium text-primaryText ">
+              <p className="text-base sm:text-lg font-medium text-primaryText">
                 Multiple location selection option
               </p>
             </div>
+            {/* Feature 2 */}
             <div className="flex items-center gap-4">
               <svg
                 width="24"
@@ -243,10 +264,11 @@ export default function driver() {
                   fill="#323B47"
                 />
               </svg>
-              <p className="text-lg font-medium text-primaryText ">
+              <p className="text-base sm:text-lg font-medium text-primaryText">
                 In-app tracking allows you and the receiver to track
               </p>
             </div>
+            {/* Feature 3 */}
             <div className="flex items-center gap-4">
               <svg
                 width="24"
@@ -260,10 +282,11 @@ export default function driver() {
                   fill="#323B47"
                 />
               </svg>
-              <p className="text-lg font-medium text-primaryText ">
+              <p className="text-base sm:text-lg font-medium text-primaryText">
                 Truck hiring for the whole day
               </p>
             </div>
+            {/* Feature 4 */}
             <div className="flex items-center gap-4">
               <svg
                 width="24"
@@ -277,18 +300,23 @@ export default function driver() {
                   fill="#323B47"
                 />
               </svg>
-              <p className="text-lg font-medium text-primaryText ">
+              <p className="text-base sm:text-lg font-medium text-primaryText">
                 Round-trip option
               </p>
             </div>
           </div>
         </div>
-        <Image
-          src={"/images/briverMoving.png"}
-          height={200}
-          width={500}
-          alt="car"
-        ></Image>
+
+        {/* Image Section */}
+        <div className="flex justify-center lg:justify-end flex-1">
+          <Image
+            src="/images/briverMoving.png"
+            height={200}
+            width={500}
+            alt="car"
+            className="w-full max-w-sm sm:max-w-md lg:max-w-lg"
+          />
+        </div>
       </div>
     </div>
   );
