@@ -104,24 +104,23 @@ export default function movingInfo() {
         <div>
           <h1 className="text-[18px] font-normal">Select Payment Method</h1>
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 mt-5">
-  <Button
-    className="w-full lg:w-auto px-8 lg:px-12 py-4 lg:py-6 text-base lg:text-[18px] font-lora font-normal text-center"
-    color="default"
-    // variant="solid"
-  >
-    Online Payment
-    <CircleDollarSign />
-  </Button>
-  <Button
-    className="w-full lg:w-auto px-8 lg:px-12 py-4 lg:py-6 text-base lg:text-[18px] font-lora font-normal text-center"
-    color="default"
-    // variant="solid"
-  >
-    Cash
-    <CircleDollarSign />
-  </Button>
-</div>
-
+            <Button
+              className="w-full lg:w-auto px-8 lg:px-12 py-4 lg:py-6 text-base lg:text-[18px] font-lora font-normal text-center"
+              color="default"
+              // variant="solid"
+            >
+              Online Payment
+              <CircleDollarSign />
+            </Button>
+            <Button
+              className="w-full lg:w-auto px-8 lg:px-12 py-4 lg:py-6 text-base lg:text-[18px] font-lora font-normal text-center"
+              color="default"
+              // variant="solid"
+            >
+              Cash
+              <CircleDollarSign />
+            </Button>
+          </div>
         </div>
         {/* Buttons */}
 

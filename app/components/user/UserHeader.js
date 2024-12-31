@@ -163,7 +163,7 @@ export default function UserHeader() {
           <Bell />
         </Badge>
       ),
-      path: "/driver",
+      path: "/user/userNotifications",
     },
     {
       icon: <ChevronDown className="inline w-4 h-4 ml-1" />,
@@ -198,7 +198,7 @@ export default function UserHeader() {
             width={80}
             src="/images/Logo.png"
             alt="Logo"
-            className="object-contain"
+            className="object-contain "
           />
         </Link>
 

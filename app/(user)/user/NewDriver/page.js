@@ -63,7 +63,20 @@ const NewDriver = () => {
 
 
           {/* Next Button */}
-          <Link href={"AcceptReject"}>
+          {/* <Link href={"AcceptReject"}>
+            <div className="flex justify-center ">
+              <Button
+                color="default"
+                variant="solid"
+                htmlType="submit"
+                className="w-1/2 text-xl font-normal font-lora mx-auto py-6"
+              >
+                Next
+                <span className="ml-2">{">>"}</span>
+              </Button>
+            </div>
+          </Link> */}
+          <Link href={"priceDone"}>
             <div className="flex justify-center ">
               <Button
                 color="default"
