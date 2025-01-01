@@ -1,6 +1,6 @@
 import Map from "@/app/components/shared/Map";
 import { Button } from "antd";
-import { Mail, Phone } from "lucide-react";
+import { ChevronLeft, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -48,20 +48,8 @@ export default function ErrandDetails() {
                     <Phone />
                   </div>
                 </div>
-
-                <div className="flex justify-between mt-6">
-                  <Link href="/driver/ParcelWay" passHref>
-                    <Button
-                      className="px-16 py-6 text-[18px] text-white bg-gray-400 font-lora font-normal"
-                      color="default"
-                      variant="solid"
-                    >
-                      Parcel is picked up
-                    </Button>
-                  </Link>
-                </div>
               </div>
-              <div className="flex justify-between mb-6">
+              <div className="flex justify-start pt-8 mb-6">
                 <div>
                   <h3 className="font-medium">Pickup</h3>
                   <p className="text-sm text-gray-600">Date: 12-11-2024</p>
@@ -78,7 +66,46 @@ export default function ErrandDetails() {
                   </p>
                 </div>
               </div>
+
+              <div>
+                <h1 className="text-[20px] font-normal ">
+                  Select Payment Method
+                </h1>
+              </div>
+
+              <div className="flex justify-start gap-6  mt-6">
+                <Link href="/driver/ParcelWay" passHref>
+                  <Button
+                    className="px-8 py-6 text-[18px]  rounded-2xl bg-white text-black font-lora font-normal"
+                    color="default"
+                    // variant="solid"
+                  >
+                    Online Payment
+                  </Button>
+                </Link>
+                <Link href="/driver/ParcelWay" passHref>
+                  <Button
+                    className="px-8 py-6 text-[18px] rounded-2xl  bg-white text-black font-lora font-normal"
+                    color="default"
+                    variant="solid"
+                  >
+                    Cash
+                  </Button>
+                </Link>
+              </div>
             </div>
+          </div>
+          <div className="mt-8">
+            <Link href="/user/Confirm" passHref>
+              <Button
+                className="px-8 py-6 text-[18px]  rounded-2xl bg-white text-black font-lora font-normal"
+                color="default"
+                // variant="solid"
+              >
+                <ChevronLeft />
+                Back
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

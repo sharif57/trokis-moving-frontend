@@ -5,7 +5,7 @@ import React from "react";
 export default function ErrandUser() {
   return (
     <div>
-      <div className="min-h-screen bg-gray-50 flex flex-col items-center px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen  flex flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="mt-8">
           <Image
@@ -22,16 +22,22 @@ export default function ErrandUser() {
         {/* Options */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
           {/* Send Package */}
-          <button className="w-full border px-14 border-gray-300 text-primaryText    bg-white shadow-md rounded-lg py-6 text-center hover:bg-black hover:text-white focus:ring-2 focus:ring-black focus:outline-none">
-            <div className="text-3xl mb-4">📦</div>
-            <p className="font-medium">Send package</p>
-          </button>
+
+          <Link href={"/user/ErrandSendReceive"}>
+            <button className="w-full border px-14 border-gray-300 text-primaryText    bg-white shadow-md rounded-lg py-6 text-center hover:bg-black hover:text-white focus:ring-2 focus:ring-black focus:outline-none">
+              <div className="text-3xl mb-4">📦</div>
+              <p className="font-medium">Send package</p>
+            </button>
+          </Link>
 
           {/* Receive Package */}
-          <button className="w-full border border-gray-300 text-primaryText bg-white shadow-md rounded-lg py-6 text-center hover:bg-black hover:text-white focus:ring-2 focus:ring-black focus:outline-none">
-            <div className="text-3xl mb-4">📥</div>
-            <p className="font-medium">Receive package</p>
-          </button>
+
+          <Link href={'/user/ErrandSendReceive'}>
+            <button className="w-full border border-gray-300 text-primaryText hover:text-white  shadow-md rounded-lg py-6 text-center hover:bg-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none">
+              <div className="text-3xl mb-4">📥</div>
+              <p className="font-medium">Receive package</p>
+            </button>
+          </Link>
 
           {/* Errand */}
 
