@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -138,7 +139,7 @@ export default function Footer() {
             </div>
 
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
-              <div className="text-center sm:text-left">
+              {/* <div className="text-center sm:text-left">
                 <p className="text-lg font-medium ">About Us</p>
 
                 <ul className="mt-8 space-y-4 text-sm">
@@ -167,7 +168,7 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
               <div className="text-center sm:text-left">
                 <p className="text-lg font-medium ">Our Services</p>
@@ -175,28 +176,34 @@ export default function Footer() {
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
                     <a className="" href="#">
-                      Web Development
+                     Home
                     </a>
                   </li>
 
                   <li>
                     <a className="" href="#">
                       {" "}
-                      Web Design{" "}
+                      User{" "}
                     </a>
                   </li>
 
                   <li>
                     <a className="" href="#">
                       {" "}
-                      Marketing{" "}
+                      Driver{" "}
                     </a>
                   </li>
 
                   <li>
                     <a className="" href="#">
                       {" "}
-                      Google Ads{" "}
+                      About US{" "}
+                    </a>
+                  </li>
+                  <li>
+                    <a className="" href="#">
+                      {" "}
+                      Contact US{" "}
                     </a>
                   </li>
                 </ul>
@@ -207,17 +214,23 @@ export default function Footer() {
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
-                    <a className="" href="#">
+                    <Link href={'/Privacy'} className="">
                       {" "}
-                      FAQs{" "}
-                    </a>
+                      Privacy Policy{" "}
+                    </Link>
                   </li>
 
                   <li>
-                    <a className="" href="#">
+                    <Link className="" href={'/Terms'}>
                       {" "}
-                      Support{" "}
-                    </a>
+                      Terms &  Condition{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="" href={'/Trust'}>
+                      {" "}
+                      Trust & Safety{" "}
+                    </Link>
                   </li>
 
                   <li>
@@ -247,7 +260,7 @@ export default function Footer() {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="size-5 shrink-0 text-gray-900"
+                        className="size-5 shrink-0 "
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -271,7 +284,7 @@ export default function Footer() {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="size-5 shrink-0 text-gray-900"
+                        className="size-5 shrink-0 "
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -291,7 +304,7 @@ export default function Footer() {
                   <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="size-5 shrink-0 text-gray-900"
+                      className="size-5 shrink-0 "
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

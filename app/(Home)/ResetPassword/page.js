@@ -9,13 +9,13 @@ import Link from "next/link";
 
 export default function ResetPassword() {
   return (
-    <div className="flex items-center justify-center font-lora gap-10 bg-gray-100">
+    <div className="lg:flex items-center justify-center font-lora gap-10 bg-gray-100">
       {/* Image Section */}
       <div className="mb-8">
         <Image
           height={700}
           width={500}
-          className="h-full"
+          className="h-full hidden sm:block"
           src="/images/ResetPassword.png"
           alt="Driver Login"
           priority
@@ -27,7 +27,7 @@ export default function ResetPassword() {
         <h1 className="text-[30px] font-normal text-primaryText text-center pb-2">
         Reset Password{" "}
         </h1>
-        <p className="w-1/2 mx-auto text-center">
+        <p className="lg:w-1/2 mx-auto text-center">
         Your password must be 8-10 character long.
         </p>
         <div className="mb-4 mt-4">

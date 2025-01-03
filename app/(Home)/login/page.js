@@ -16,13 +16,13 @@ const onChange = (e) => {
 };
 export default function login() {
   return (
-    <div className="flex items-center justify-center font-lora gap-10 bg-gray-100">
+    <div className="lg:flex items-center justify-center font-lora gap-10 bg-gray-100">
       {/* Image Section */}
       <div className="mb-8">
         <Image
           height={500}
           width={500}
-          className="h-full"
+          className="h-full hidden sm:block"
           src="/images/driverLogin.png"
           alt="Driver Login"
           priority

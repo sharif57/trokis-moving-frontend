@@ -9,13 +9,13 @@ import Link from "next/link";
 
 export default function forgot() {
   return (
-    <div className="flex items-center justify-center font-lora gap-10 bg-gray-100">
+    <div className="lg:flex items-center justify-center font-lora gap-10 bg-gray-100">
       {/* Image Section */}
       <div className="mb-8">
         <Image
           height={500}
           width={500}
-          className="h-full"
+          className="h-full hidden sm:block"
           src="/images/forgot.png"
           alt="Driver Login"
           priority
@@ -27,7 +27,7 @@ export default function forgot() {
         <h1 className="text-[30px] font-normal text-primaryText text-center pb-2">
           Forgot Password{" "}
         </h1>
-        <p className="w-1/2 mx-auto text-center">
+        <p className="lg:w-1/2 mx-auto text-center">
           Please enter your email address to reset your password.
         </p>
         <div className="mb-4 mt-4">

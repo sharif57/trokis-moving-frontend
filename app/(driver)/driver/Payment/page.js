@@ -3,7 +3,7 @@ import React from "react";
 
 const PaymentCard = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center py-10 text-primaryText">
+    <div className=" bg-gray-100 flex flex-col items-center justify-center py-10 text-primaryText">
       {/* Cards at the top */}
       <div className="flex space-x-4 mb-8">
         <div className="bg-white shadow-md p-4 rounded-lg text-center w-48">

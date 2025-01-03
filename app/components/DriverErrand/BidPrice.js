@@ -53,7 +53,7 @@ export default function BidPrice() {
                   variant="solid"
                   className="font-normal text-xl font-lora px-7 py-6"
                 >
-                  NEXT
+                  Next
                 </Button>
               </Link>
             </div>
