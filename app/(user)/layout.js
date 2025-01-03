@@ -2,6 +2,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Message from "../components/user/Message";
 import UserHeader from "../components/user/UserHeader";
+
 import "../globals.css";
 
 export default function RootLayout({ children }) {

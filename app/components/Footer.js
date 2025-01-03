@@ -354,7 +354,7 @@ export default function Footer() {
               </p>
 
               <p className="mt-4 text-sm sm:order-first sm:mt-0">
-                &copy; 2022 Company Name
+                &copy; 2022 Trokis. All rights reserved.
               </p>
             </div>
           </div>
