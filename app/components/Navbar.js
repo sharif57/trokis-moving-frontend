@@ -1,31 +1,29 @@
-// 'use client';
 
-// import { useState } from 'react';
-// import Link from 'next/link';
-// import { usePathname } from 'next/navigation';
-// import { Menu, X, ChevronDown } from 'lucide-react';
-// import Image from 'next/image';
+
+// "use client";
+
+// import { useState } from "react";
+// import Link from "next/link";
+// import { usePathname } from "next/navigation";
+// import { Menu, X, ChevronDown } from "lucide-react";
+// import Image from "next/image";
 
 // export default function Navbar() {
 //   const [open, setOpen] = useState(false);
-//   const [dropdownOpen, setDropdownOpen] = useState(false);
 //   const pathname = usePathname();
 
 //   const menuList = [
-//     { title: 'Home', path: '/' },
-//     // { title: 'Service', path: '/service' },
+//     { title: "Home", path: "/" },
 //     {
-//       title: 'Service',
+//       title: "Service",
 //       icon: <ChevronDown className="inline w-4 h-4 ml-1" />,
 //       submenu: [
-//         { title: 'User', path: '/user' },
-//         { title: 'Driver', path: '/driver' },
-
+//         { title: "User", path: "/user" },
+//         { title: "Driver", path: "/driver" },
 //       ],
 //     },
-//     { title: 'Contact Us', path: '/contact' },
-//     { title: 'About Us', path: '/about' },
-
+//     { title: "Contact Us", path: "/contact" },
+//     { title: "About Us", path: "/about" },
 //   ];
 
 //   return (
@@ -33,61 +31,78 @@
 //       <div className="lg:w-[1620px] mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
 //         {/* Logo */}
 //         <Link href="/" className="flex items-center">
-//           <Image height={100} width={100} className="" src={'/images/Logo.png'} alt="Logo" />
+//           <Image
+//             height={100}
+//             width={100}
+//             className=""
+//             src={"/images/Logo.png"}
+//             alt="Logo"
+//           />
 //         </Link>
 
 //         {/* Hamburger menu icon for mobile */}
 //         <div className="lg:hidden" onClick={() => setOpen(!open)}>
-//           {!open ? <Menu className="w-6 h-6 text-primary" /> : <X className="w-6 h-6 text-primary" />}
+//           {!open ? (
+//             <Menu className="w-6 h-6 text-primary" />
+//           ) : (
+//             <X className="w-6 h-6 text-primary" />
+//           )}
 //         </div>
 
 //         {/* Menu items */}
 //         <ul
 //           className={`lg:flex items-center gap-8 text-xl absolute lg:static bg-white lg:bg-transparent w-full lg:w-auto left-0 lg:left-auto transition-all duration-300 ease-in-out ${
-//             open ? 'top-20 p-6 lg:p-0' : '-top-96'
+//             open ? "top-20 p-6 lg:p-0" : "-top-96"
 //           }`}
 //         >
 //           {menuList.map((item, index) => (
-//             <li
-//               key={index}
-//               className={`relative ${
-//                 item.path === pathname ? 'text-primary font-bold' : 'text-black'
-//               } text-lg lg:my-0 my-2`}
-//               onMouseEnter={() => item.submenu && setDropdownOpen(true)}
-//               onMouseLeave={() => item.submenu && setDropdownOpen(false)}
-//             >
-//               {item.path ? (
-//                 <Link href={item.path} className="flex items-center hover:text-primary transition duration-200">
-//                   {item.title}
-//                   {item.icon && item.icon}
-//                 </Link>
+//             <li key={index} className="relative group text-lg lg:my-0 my-2">
+//               {item.submenu ? (
+//                 <>
+//                   <button
+//                     className={`flex items-center hover:text-primary transition duration-200 ${
+//                       item.path === pathname
+//                         ? "text-primary font-bold"
+//                         : "text-black"
+//                     }`}
+//                   >
+//                     {item.title}
+//                     {item.icon && item.icon}
+//                   </button>
+//                   {/* Dropdown menu for Pages */}
+//                   <ul className="absolute left-0 mt-2 bg-white shadow-lg  rounded-lg w-48 text-black z-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 transform transition duration-300 ease-in-out">
+//                     {item.submenu.map((subItem, subIndex) => (
+//                       <li
+//                         key={subIndex}
+//                         className="px-4 py-2 hover:bg-primaryText  hover:text-white transition duration-300"
+//                       >
+//                         <Link href={subItem.path}>{subItem.title}</Link>
+//                       </li>
+//                     ))}
+//                   </ul>
+//                 </>
 //               ) : (
-//                 <span className="flex items-center cursor-default">
+//                 <Link
+//                   href={item.path}
+//                   className={`flex items-center hover:text-primary transition duration-200 ${
+//                     item.path === pathname
+//                       ? "text-primary font-bold"
+//                       : "text-black"
+//                   }`}
+//                 >
 //                   {item.title}
-//                   {item.icon && item.icon}
-//                 </span>
-//               )}
-
-//               {/* Dropdown menu for Pages */}
-//               {item.submenu && dropdownOpen && (
-//                 <ul className="absolute left-0 mt-2 bg-white shadow-lg border rounded-lg w-48 text-black z-10">
-//                   {item.submenu.map((subItem, subIndex) => (
-//                     <li key={subIndex} className="px-4 py-2 hover:bg-primary hover:text-blue-500 transition duration-200">
-//                       <Link href={subItem.path}>{subItem.title}</Link>
-//                     </li>
-//                   ))}
-//                 </ul>
+//                 </Link>
 //               )}
 //             </li>
 //           ))}
 
 //           {/* Login button */}
 //           <li className="flex items-center gap-4 mt-4 lg:mt-0 lg:ml-4">
-//             <button
-//               className=" bg-secondaryBg text-white px-8 py-3 rounded-full hover:bg-gray-400 transition duration-200"
-//             >
-//               Sign Up
-//             </button>
+//             <Link href={"/login"}>
+//               <button className="bg-secondaryBg text-white px-8 py-3 rounded-full hover:bg-gray-400 transition duration-200">
+//                 Sign Up
+//               </button>
+//             </Link>
 //           </li>
 //         </ul>
 //       </div>
@@ -99,17 +114,32 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { scrollToContact, scrollToAbout } from "../(Home)/page";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [dropdownOpenIndex, setDropdownOpenIndex] = useState(null);
   const pathname = usePathname();
+  const router = useRouter();
 
-  const toggleDropdown = (index) => {
-    setDropdownOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  const handleContactClick = (event) => {
+    event.preventDefault();
+    if (pathname === "/") {
+      scrollToContact();
+    } else {
+      router.push("/#contact");
+    }
+  };
+
+  const handleAboutClick = (event) => {
+    event.preventDefault();
+    if (pathname === "/") {
+      scrollToAbout();
+    } else {
+      router.push("/#about");
+    }
   };
 
   const menuList = [
@@ -122,8 +152,16 @@ export default function Navbar() {
         { title: "Driver", path: "/driver" },
       ],
     },
-    { title: "Contact Us", path: "/contact" },
-    { title: "About Us", path: "/about" },
+    {
+      title: "Contact Us",
+      path: "/#contact", // Anchor for scrolling
+      onClick: handleContactClick, // Custom click handler
+    },
+    {
+      title: "About Us",
+      path: "/#about", // Anchor for scrolling
+      onClick: handleAboutClick, // Custom click handler
+    },
   ];
 
   return (
@@ -134,7 +172,6 @@ export default function Navbar() {
           <Image
             height={100}
             width={100}
-            className=""
             src={"/images/Logo.png"}
             alt="Logo"
           />
@@ -142,11 +179,7 @@ export default function Navbar() {
 
         {/* Hamburger menu icon for mobile */}
         <div className="lg:hidden" onClick={() => setOpen(!open)}>
-          {!open ? (
-            <Menu className="w-6 h-6 text-primary" />
-          ) : (
-            <X className="w-6 h-6 text-primary" />
-          )}
+          {!open ? <Menu className="w-6 h-6 text-primary" /> : <X className="w-6 h-6 text-primary" />}
         </div>
 
         {/* Menu items */}
@@ -156,41 +189,28 @@ export default function Navbar() {
           }`}
         >
           {menuList.map((item, index) => (
-            <li key={index} className="relative text-lg lg:my-0 my-2">
+            <li key={index} className="relative group text-lg lg:my-0 my-2">
               {item.submenu ? (
                 <>
-                  <button
-                    onClick={() => toggleDropdown(index)}
-                    className={`flex items-center hover:text-primary transition duration-200 ${
-                      item.path === pathname
-                        ? "text-primary font-bold"
-                        : "text-black"
-                    }`}
-                  >
+                  <button className="flex items-center hover:text-primary transition duration-200">
                     {item.title}
                     {item.icon && item.icon}
                   </button>
-                  {/* Dropdown menu for Pages */}
-                  {dropdownOpenIndex === index && (
-                    <ul className="absolute left-0 mt-2 bg-white shadow-lg border rounded-lg w-48 text-black z-10">
-                      {item.submenu.map((subItem, subIndex) => (
-                        <li
-                          key={subIndex}
-                          className="px-4 py-2 hover:bg-primary hover:text-blue-500 transition duration-200"
-                        >
-                          <Link href={subItem.path}>{subItem.title}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  {/* Dropdown menu */}
+                  <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg w-48 text-black z-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 transform transition duration-300 ease-in-out">
+                    {item.submenu.map((subItem, subIndex) => (
+                      <li key={subIndex} className="px-4 py-2 hover:bg-primaryText hover:text-white transition duration-300">
+                        <Link href={subItem.path}>{subItem.title}</Link>
+                      </li>
+                    ))}
+                  </ul>
                 </>
               ) : (
                 <Link
                   href={item.path}
+                  onClick={item.onClick}
                   className={`flex items-center hover:text-primary transition duration-200 ${
-                    item.path === pathname
-                      ? "text-primary font-bold"
-                      : "text-black"
+                    item.path === pathname ? "text-primary font-bold" : "text-black"
                   }`}
                 >
                   {item.title}
@@ -198,10 +218,9 @@ export default function Navbar() {
               )}
             </li>
           ))}
-
           {/* Login button */}
           <li className="flex items-center gap-4 mt-4 lg:mt-0 lg:ml-4">
-            <Link href={'/login'}>
+            <Link href={"/login"}>
               <button className="bg-secondaryBg text-white px-8 py-3 rounded-full hover:bg-gray-400 transition duration-200">
                 Sign Up
               </button>

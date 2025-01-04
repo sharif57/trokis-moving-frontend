@@ -336,18 +336,18 @@ export default function Footer() {
               <p className="text-sm ">
                 <span className="block sm:inline">All rights reserved.</span>
 
-                <a
+                <Link 
                   className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                  href="#"
+                  href="/Terms"
                 >
                   Terms & Conditions
-                </a>
+                </Link>
 
                 <span>&middot;</span>
 
                 <a
                   className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                  href="#"
+                  href="/Privacy"
                 >
                   Privacy Policy
                 </a>

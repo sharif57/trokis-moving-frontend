@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useEffect, useState } from "react";
 import { Select, Input, Button } from "antd";
@@ -7,7 +6,6 @@ import Map from "@/app/components/shared/Map";
 import Link from "next/link";
 
 const { Option } = Select;
-
 
 const NewDriver = () => {
   const [isClient, setIsClient] = useState(false);
@@ -19,18 +17,17 @@ const NewDriver = () => {
   if (!isClient) return null;
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between gap-8 text-primaryText p-4 lg:p-8">
+    <div className="lg:flex flex-col lg:flex-row justify-between items-start gap-8 px-4 sm:px-6 lg:px-12 py-8">
       {/* Form Section */}
       <div className="w-full lg:w-1/2  rounded-md p-6">
         <form>
           {/* Starting Location */}
           <div className="mb-4 space-y-4">
-           
             <div className="flex items-center mt-1">
               <Input
                 id="starting-location"
                 placeholder="Describe Your Errand"
-                // suffix={<EnvironmentOutlined />} 
+                // suffix={<EnvironmentOutlined />}
                 className="w-full py-3"
               />
             </div>
@@ -38,7 +35,7 @@ const NewDriver = () => {
               <Input
                 id="starting-location"
                 placeholder="Pick up location"
-                suffix={<EnvironmentOutlined />} 
+                suffix={<EnvironmentOutlined />}
                 className="w-full py-3"
               />
             </div>
@@ -46,7 +43,7 @@ const NewDriver = () => {
               <Input
                 id="starting-location"
                 placeholder="Drop off location"
-                suffix={<EnvironmentOutlined />} 
+                suffix={<EnvironmentOutlined />}
                 className="w-full py-3"
               />
             </div>
@@ -54,13 +51,11 @@ const NewDriver = () => {
               <Input
                 id="starting-location"
                 placeholder="Add more destinations"
-                suffix={<EnvironmentOutlined />} 
+                suffix={<EnvironmentOutlined />}
                 className="w-full py-3"
               />
             </div>
           </div>
-
-
 
           {/* Next Button */}
           {/* <Link href={"AcceptReject"}>
@@ -78,7 +73,7 @@ const NewDriver = () => {
           </Link> */}
           <Link href={"priceDone"}>
             <div className="flex justify-center ">
-              <Button
+              {/* <Button
                 color="default"
                 variant="solid"
                 htmlType="submit"
@@ -86,14 +81,17 @@ const NewDriver = () => {
               >
                 Next
                 <span className="ml-2">{">>"}</span>
-              </Button>
+              </Button> */}
+              <button className="w-full px-7 py-4  text-sm sm:text-[18px] font-lora font-normal text-white bg-black hover:bg-gray-800 transition rounded-lg">
+                Next
+              </button>
             </div>
           </Link>
         </form>
       </div>
 
       {/* Map Section */}
-      <div className="w-full ">
+      <div className=" ">
         <Map />
       </div>
     </div>
@@ -101,4 +99,3 @@ const NewDriver = () => {
 };
 
 export default NewDriver;
-

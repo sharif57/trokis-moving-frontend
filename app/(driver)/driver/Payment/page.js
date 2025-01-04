@@ -3,7 +3,7 @@ import React from "react";
 
 const PaymentCard = () => {
   return (
-    <div className=" bg-gray-100 flex flex-col items-center justify-center py-10 text-primaryText">
+    <div className="bg-gray-100 flex flex-col items-center justify-center py-10 text-primaryText">
       {/* Cards at the top */}
       <div className="flex space-x-4 mb-8">
         <div className="bg-white shadow-md p-4 rounded-lg text-center w-48">
@@ -19,16 +19,14 @@ const PaymentCard = () => {
       {/* Payment Form */}
       <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-lg">
         <button className="text-gray-600 text-sm flex items-center mb-6">
-          <span className="material-icons mr-2"><ChevronLeft /></span> Back
+          <ChevronLeft className="mr-2" />
+          Back
         </button>
         <h2 className="text-lg font-semibold mb-4">Payment Method</h2>
         <form>
           {/* Cardholder Name */}
           <div className="mb-4">
-            <label
-              htmlFor="cardholder-name"
-              className="block text-gray-600 text-sm mb-2"
-            >
+            <label htmlFor="cardholder-name" className="block text-gray-600 text-sm mb-2">
               Cardholder Name
             </label>
             <input
@@ -41,10 +39,7 @@ const PaymentCard = () => {
 
           {/* Card Number */}
           <div className="mb-4">
-            <label
-              htmlFor="card-number"
-              className="block text-gray-600 text-sm mb-2"
-            >
+            <label htmlFor="card-number" className="block text-gray-600 text-sm mb-2">
               Card Number
             </label>
             <input
@@ -58,10 +53,7 @@ const PaymentCard = () => {
           {/* Expiry and CVC */}
           <div className="flex space-x-4 mb-4">
             <div className="flex-1">
-              <label
-                htmlFor="expiry"
-                className="block text-gray-600 text-sm mb-2"
-              >
+              <label htmlFor="expiry" className="block text-gray-600 text-sm mb-2">
                 MM/YY
               </label>
               <input
@@ -72,10 +64,7 @@ const PaymentCard = () => {
               />
             </div>
             <div className="flex-1">
-              <label
-                htmlFor="cvc"
-                className="block text-gray-600 text-sm mb-2"
-              >
+              <label htmlFor="cvc" className="block text-gray-600 text-sm mb-2">
                 CVC
               </label>
               <input
@@ -89,10 +78,7 @@ const PaymentCard = () => {
 
           {/* Email */}
           <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-600 text-sm mb-2"
-            >
+            <label htmlFor="email" className="block text-gray-600 text-sm mb-2">
               Email
             </label>
             <input
@@ -114,28 +100,17 @@ const PaymentCard = () => {
 
           {/* Save Card */}
           <div className="mb-4 flex items-center">
-            <input
-              type="checkbox"
-              id="save-card"
-              className="mr-2 h-4 w-4"
-            />
-            <label
-              htmlFor="save-card"
-              className="text-gray-600 text-sm"
-            >
+            <input type="checkbox" id="save-card" className="mr-2 h-4 w-4" />
+            <label htmlFor="save-card" className="text-gray-600 text-sm">
               Save this Card for future purchases. <br />
               <span className="text-xs">
-                You’ll be able to delete your card details at any time from your
-                settings
+                You’ll be able to delete your card details at any time from your settings
               </span>
             </label>
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="bg-black text-white py-2 px-6 rounded-md w-full"
-          >
+          <button type="submit" className="bg-black text-white py-2 px-6 rounded-md w-full">
             Submit
           </button>
         </form>

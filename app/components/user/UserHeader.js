@@ -150,8 +150,12 @@ import { Badge } from "antd";
 
 export default function UserHeader() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpenIndex, setDropdownOpenIndex] = useState(null);
   const pathname = usePathname();
+
+  const toggleDropdown = (index) => {
+    setDropdownOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   const menuList = [
     { title: "Moving", path: "/user/moving" },
@@ -168,12 +172,13 @@ export default function UserHeader() {
     {
       icon: <ChevronDown className="inline w-4 h-4 ml-1" />,
       image: (
-        <div className="size-10 relative">
+        <div className="relative w-10 h-10">
           <Image
             src="/images/driver.png"
-            alt="Service"
+            alt="User Avatar"
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
+            className="rounded-full"
           />
         </div>
       ),
@@ -182,14 +187,14 @@ export default function UserHeader() {
         { title: "Activity", icon: <Cable />, path: "/driver/Activity" },
         { title: "Payment", icon: <BadgeDollarSign />, path: "/driver/Payment" },
         { title: "Message", icon: <Mail />, path: "/driver/Message" },
-        { title: "Support", icon: <CircleHelp />, path: "/driver/Support" },
-        { title: "Logout", icon: <LogOut />, path: "/driver/Logout" },
+        { title: "Support", icon: <CircleHelp />, path: "/user/support" },
+        { title: "Logout", icon: <LogOut />, path: "/user/logout" },
       ],
     },
-  ];  
+  ];
 
   return (
-    <nav className="top-0 z-50">
+    <nav className="top-0 z-50 bg-white shadow">
       <div className="lg:max-w-[1620px] mx-auto px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/user" className="flex items-center">
@@ -198,7 +203,7 @@ export default function UserHeader() {
             width={80}
             src="/images/Logo.png"
             alt="Logo"
-            className="object-contain "
+            className="object-contain"
           />
         </Link>
 
@@ -218,9 +223,7 @@ export default function UserHeader() {
           }`}
         >
           <div className="p-4 flex justify-between items-center border-b">
-            <Link href="/driver/Moving" className="text-lg font-bold">
-              Menu
-            </Link>
+            <span className="text-lg font-bold">Menu</span>
             <X
               className="w-6 h-6 cursor-pointer text-primary"
               onClick={() => setSidebarOpen(false)}
@@ -228,15 +231,12 @@ export default function UserHeader() {
           </div>
           <ul className="p-4">
             {menuList.map((item, index) => (
-              <li
-                key={index}
-                className={`mb-4 ${
-                  item.path === pathname ? "text-primary font-bold" : "text-black"
-                }`}
-              >
+              <li key={index} className="mb-4">
                 <Link
-                  href={item.path || "#"} // Ensure href has a fallback
-                  className="flex items-center gap-2"
+                  href={item.path || "#"}
+                  className={`flex items-center gap-2 ${
+                    item.path === pathname ? "text-primary font-bold" : "text-black"
+                  }`}
                   onClick={() => setSidebarOpen(false)}
                 >
                   {item.icon && item.icon}
@@ -247,8 +247,8 @@ export default function UserHeader() {
                     {item.submenu.map((subItem, subIndex) => (
                       <li key={subIndex} className="mb-2">
                         <Link
-                          href={subItem.path || "#"} // Ensure href has a fallback
-                          className="flex items-center gap-2 hover:text-primary"
+                          href={subItem.path || "#"}
+                          className="flex items-center gap-2 hover:text-primary transition duration-200"
                           onClick={() => setSidebarOpen(false)}
                         >
                           {subItem.icon}
@@ -268,14 +268,14 @@ export default function UserHeader() {
           {menuList.map((item, index) => (
             <li
               key={index}
-              className={`relative ${
+              className={`relative group ${
                 item.path === pathname ? "text-black font-bold" : "text-black"
               }`}
-              onMouseEnter={() => item.submenu && setDropdownOpen(true)}
-              onMouseLeave={() => item.submenu && setDropdownOpen(false)}
+              onMouseEnter={() => item.submenu && toggleDropdown(index)}
+              onMouseLeave={() => item.submenu && toggleDropdown(null)}
             >
               <Link
-                href={item.path || "#"} // Ensure href has a fallback
+                href={item.path || "#"}
                 className="flex items-center hover:text-primary transition duration-200"
               >
                 {item.image && item.image}
@@ -284,14 +284,12 @@ export default function UserHeader() {
               </Link>
               {item.submenu && (
                 <ul
-                  className={`absolute left-0 mt-2 bg-white shadow-lg border rounded-lg w-48 text-black z-10 ${
-                    dropdownOpen ? "block" : "hidden"
-                  }`}
+                  className={`absolute left-0 mt-2 bg-white shadow-lg border rounded-lg w-48 text-black z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
                 >
                   {item.submenu.map((subItem, subIndex) => (
                     <li
                       key={subIndex}
-                      className="flex items-center gap-2 px-4 py-2 hover:bg-primary hover:text-blue-500"
+                      className="flex items-center gap-2 px-4 py-2 hover:bg-primaryText hover:text-white transition duration-200"
                     >
                       {subItem.icon}
                       <Link href={subItem.path || "#"}>{subItem.title}</Link>

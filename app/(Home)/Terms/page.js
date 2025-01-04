@@ -3,9 +3,9 @@ import React from "react";
 
 export default function Terms() {
   return (
-    <div className="max-w-7xl mx-auto px-4 text-primaryText text-lora border-2 border-primaryText p-4 rounded-lg mt-8">
+    <div className="max-w-7xl mx-auto px-4  text-primaryText text-lora border-2 border-primaryText p-4 rounded-lg mt-8">
       <div>
-        <h1 class="text-2xl font-normal  border-b pb-4 mb-6">
+        <h1 className="text-2xl font-normal  border-b pb-4 mb-6">
         Terms &  Condition
         </h1>
         <p>
@@ -22,7 +22,7 @@ export default function Terms() {
       </div>
       <div className="space-y-6 mt-6">
         <div>
-          <h2 class="text-2xl font-normal text-primaryText pb-2">
+          <h2 className="text-2xl font-normal text-primaryText pb-2">
             What personal information do we collect from the people that visit
             our website or blog?
           </h2>
@@ -33,7 +33,7 @@ export default function Terms() {
           </p>
         </div>
         <div>
-          <h2 class="text-2xl font-normal text-primaryText pb-2">
+          <h2 className="text-2xl font-normal text-primaryText pb-2">
             When do we collect information?
           </h2>
           <p>
@@ -43,7 +43,7 @@ export default function Terms() {
           </p>
         </div>
         <div>
-          <h2 class="text-2xl font-normal text-primaryText pb-2">
+          <h2 className="text-2xl font-normal text-primaryText pb-2">
             How do we use your information?
           </h2>
           <p>

@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Button } from "antd";
 import { ArrowDown, ArrowUp } from "lucide-react";
@@ -7,7 +8,7 @@ import Map from "../shared/Map";
 export default function BidPrice() {
   return (
     <div>
-      <div className="lg:flex gap-6">
+      <div className="lg:flex flex-col lg:flex-row justify-between items-start gap-8 px-4 sm:px-6 lg:px-12 py-8">
         <div className="rounded-lg text-[14px] font-normal font-lora">
           <div className="bg-white  p-6 space-y-2 ">
             <h1>Errand details</h1>
@@ -48,13 +49,16 @@ export default function BidPrice() {
                 Cancel
               </Button>
               <Link href={"SubmitQuoteErrand"}>
-                <Button
+                {/* <Button
                   color="default"
                   variant="solid"
                   className="font-normal text-xl font-lora px-7 py-6"
                 >
                   Next
-                </Button>
+                </Button> */}
+                <button className="w-full px-7 py-4  text-sm sm:text-[18px] font-lora font-normal text-white bg-black hover:bg-gray-800 transition rounded-lg">
+                  Next
+                </button>
               </Link>
             </div>
           </div>

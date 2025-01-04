@@ -87,10 +87,10 @@ export default function Activity() {
           {data.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-300 rounded-lg shadow-md p-4 flex items-center justify-between"
+              className="bg-white border border-gray-300 rounded-lg shadow-md p-4 lg:flex items-center justify-between"
             >
               {/* Address Section */}
-              <div className="flex-1 space-y-1">
+              <div className="lg:flex-1 space-y-1">
                 <div className="flex items-center">
                   <span className="material-icons text-gray-600 mr-2">
                     <ArrowUp />

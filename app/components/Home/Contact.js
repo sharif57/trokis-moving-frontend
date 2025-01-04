@@ -252,7 +252,7 @@ export default function Contact() {
       <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
         {/* Text Section */}
         <div className="lg:w-2/5 text-start">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-primaryText mb-4">
+          <h2 className="text-3xl sm:text-4xl font-normal text-primaryText mb-4">
             Keep Connected & Let's Get In Touch With Us
           </h2>
           <p className="text-gray-600 text-base sm:text-lg">

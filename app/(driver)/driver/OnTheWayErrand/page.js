@@ -7,7 +7,7 @@ import React from "react";
 
 export default function OnTheWayErrand() {
   return (
-    <div className="lg:flex gap-6">
+    <div className="lg:flex flex-col lg:flex-row justify-between items-start gap-8 px-4 sm:px-6 lg:px-12 py-8">
       <div className=" space-y-2 rounded-lg text-[14px] font-normal font-lora">
         <div className="bg-white text-primaryText p-6 rounded-lg">
             <h1 className="font-normal text-[18px] space-y-4 mb-4">Parcel is picked up</h1>

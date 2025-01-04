@@ -12,8 +12,8 @@ import React from "react";
 
 export default function BidStart() {
   return (
-    <div className="lg:flex justify-center gap-10">
-      <div>
+    <div className="lg:flex flex-col lg:flex-row justify-between items-start gap-8 px-4 sm:px-6 lg:px-12 py-8">
+      <div className="w-full lg:w-1/2  rounded-md ">
         <div className="   ">
           <div className="bg-white rounded-lg  p-6  w-full">
             {/* Addresses */}
