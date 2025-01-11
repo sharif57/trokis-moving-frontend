@@ -24,6 +24,8 @@ import { useEffect, useRef } from "react";
 
 export default function Map() {
   const mapRef = useRef(null); // Reference to the map container
+  const GOOGLE_MAPS_API_KEY_Next = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
 
   useEffect(() => {
     const loadGoogleMapsAPI = () => {
@@ -35,7 +37,7 @@ export default function Map() {
 
       // Load the Google Maps API script
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFi80uuJIWkkLCpodFa8oXmD8XD_h8LMc`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY_Next}`;
       script.async = true;
       script.onload = initMap; // Initialize map after the API is loaded
       document.head.appendChild(script);
@@ -46,8 +48,8 @@ export default function Map() {
 
       // Create a new map instance
       new google.maps.Map(mapRef.current, {
-        center: { lat: 23.7809757, lng: 90.3372881 }, // Center the map on Dhaka
-        zoom: 12, // Set zoom level
+        center: { lat: 0, lng: 0 }, // Center the map on Dhaka
+        zoom: 2, // Set zoom level
       });
     };
 

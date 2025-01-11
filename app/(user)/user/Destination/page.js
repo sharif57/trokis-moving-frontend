@@ -19,7 +19,7 @@ const Destination = () => {
   if (!isClient) return null;
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between gap-8 text-primaryText p-4 lg:p-8">
+    <div className="lg:flex flex-col lg:flex-row justify-between items-start gap-8 px-4 sm:px-6 lg:px-12 py-8">
       {/* Form Section */}
       <div className="w-full lg:w-1/2  rounded-md p-6">
         <form>
@@ -104,7 +104,7 @@ const Destination = () => {
       </div>
 
       {/* Map Section */}
-      <div className="w-full ">
+      <div className=" ">
         <Map />
       </div>
     </div>

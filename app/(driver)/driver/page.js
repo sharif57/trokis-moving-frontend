@@ -1,6 +1,4 @@
-import MakeBid from "@/app/components/Deriver/MovingTrip/MakeBid";
 import Banner from "@/app/components/Home/Banner";
-import Testimonial from "@/app/components/Home/Testimonial";
 import Image from "next/image";
 import React from "react";
 

@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons";
 import Map from "@/app/components/shared/Map";
 import Link from "next/link";
+import Image from "next/image";
 
 const categories = [
   {
@@ -105,7 +106,7 @@ const App = () => {
   }));
 
   return (
-    <div className="flex flex-col justify-center text-primaryText font-normal font-lora lg:flex-row lg:gap-8 p-4 lg:p-8">
+    <div className="lg:flex flex-col lg:flex-row justify-between items-start gap-8 px-4 sm:px-6 lg:px-12 py-8">
       {/* Left Section: Form */}
       <div className="lg:w-1/2 w-full">
         <div className="w-full p-6 bg-white rounded-md">
@@ -153,7 +154,9 @@ const App = () => {
               footer={null}
               onCancel={() => setPreviewOpen(false)}
             >
-              <img
+              <Image
+              height={100}
+              width={100}
                 alt="preview"
                 style={{ width: "100%" }}
                 src={previewImage}
@@ -178,7 +181,7 @@ const App = () => {
       </div>
 
       {/* Right Section: Map */}
-      <div className="w-full rounded-md">
+      <div className=" rounded-md">
         <Map />
       </div>
     </div>

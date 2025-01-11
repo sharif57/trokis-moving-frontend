@@ -41,7 +41,7 @@ export default function NotificationDetail() {
             <p className="text-sm font-medium">Pallet Spaces</p>
             <p className="text-gray-600">24 pallets.</p>
           </div>
-          <div>
+          <div>              
             <p className="text-sm font-medium">Member</p>
             <p className="text-gray-600">7</p>
           </div>

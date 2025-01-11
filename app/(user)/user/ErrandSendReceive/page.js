@@ -12,6 +12,9 @@ export default function Banner() {
   const mapRef = useRef(null);
   const directionsRendererRef = useRef(null);
 
+  const GOOGLE_MAPS_API_KEY_Next = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+
   // Initialize Google Map and DirectionsRenderer
   const initMap = () => {
     const { google } = window;
@@ -89,7 +92,7 @@ export default function Banner() {
     if (window.google) return; // Prevent duplicate loading
 
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFi80uuJIWkkLCpodFa8oXmD8XD_h8LMc&libraries&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY_Next}&libraries&libraries=places`;
     script.async = true;
     script.onload = initMap;
     document.head.appendChild(script);

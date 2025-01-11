@@ -7,7 +7,7 @@ import Map from "@/app/components/shared/Map";
 
 export default function movingInfo() {
   return (
-    <div className="flex flex-col   lg:flex-row lg:justify-between gap-8 text-primaryText p-4 lg:p-8">
+    <div className="lg:flex flex-col lg:flex-row justify-between items-start gap-8 px-4 sm:px-6 lg:px-12 py-8 text-primaryText">
       {/* Left Content */}
       <div className="lg:w-2/5 space-y-8">
         {/* Starting Address */}
@@ -138,7 +138,7 @@ export default function movingInfo() {
         </div>
       </div>
       {/* Map Section */}
-      <div className="w-full  h-[400px] lg:h-auto">
+      <div className="">
         <Map />
       </div>
     </div>
